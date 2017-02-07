@@ -4,6 +4,7 @@
 
 #main {
   margin: 20px;
+  margin-bottom: 300px;
   padding-top: 80px;
   padding-left: 80px;
   width: 600px;
@@ -28,12 +29,69 @@
   font-size: 15px;
 }
 
-li {
+ul {
+  list-style-type: none;
+}
+
+#main li {
   margin: 8px;
 }
 
-li img {
-  width: 8px;
-  height: 8px;
-  margin: auto;
+.todo-item {
+  color: #000000;
+  /* First we need to help some browsers along for this to work.
+     Just because a vendor prefix is there, doesn't mean it will
+     work in a browser made by that vendor either, it's just for
+     future-proofing purposes I guess. */
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+
+.todo-item-complete {
+  color: #AAAAAA;
+}
+
+.todo-item:hover {
+  color: #AAAAAA;
+}
+
+.strk {
+  color: #AAAAAA;
+}
+
+/* --------------------------------------
+   Footer
+   -------------------------------------- */
+
+.site-footer {
+  position:fixed;
+  width: 100%;
+  bottom: 0px;
+  background: #333;
+  color: #999999;
+  font-size: 11px;
+  padding: 20px;
+}
+
+.site-footer h6 {
+  color: #eeeeee;
+  font-size: 15px;
+}
+.site-footer h5 {
+  color: #eeeeee;
+  font-size: 12px;
+}
+.site-footer h4 {
+  color: #999999;
+  font-size: 12px;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: 0;
+
 }

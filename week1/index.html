@@ -4,13 +4,19 @@
     <meta charset="utf-8">
     <title>VT TODO</title>
 
-    <!--include the bs3-->
+    <!-- Bootstrap CSS -->
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="includes/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <!-- Stroll.js -->
+    <link rel="stylesheet" href="includes/css/stroll.css">
+
     <script scr="bootstrap/js/bootstrap.min.js"></script>
     <script src="includes/js/jquery-1.8.2.min.js"></script>
 
     <link href="includes/css/styles.css" rel="stylesheet">
     <script src="includes/js/script.js"></script>
+    <script src="includes/js/stroll.min.js"></script>
 
   </head>
   <body>
@@ -25,17 +31,42 @@
 
       <hr>
 
-      <div class="row">
-        <ol id='todo-list'>
-          <li>example 1
-            <button type="button" class="close" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-          </li>
-        </ol>
+      <div class="row" id="chart">
+        <article>
+          <ul id="todo-list" class="wave">
+          </ul>
+        </article>
       </div>
     </div> <!--end of main-->
     </div>
 
   </body>
+  <footer class="site-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-2">
+          <h5>Copyright &copy;</h5>
+          <h4>2017 Vibert Thio</h4>
+        </div><!--end of col-sm-2-->
 
+        <div class="col-sm-4">
+          <h6>About Me</h6>
+          <p>I'm studying in NTU(National Taiwan University), majoring in EE. I'm particularlu interested in A/V art.</p>
+        </div><!--end of col-sm-4-->
+
+        <div class="col-sm-2">
+          <h6>Navigation</h6>
+          <ul class="unstyled">
+            <li><a href="https://www.facebook.com/vibert.thio" target="_blank">Facebook</a></li>
+            <li><a href="https://www.pinterest.com/vibertthio/" target="_blank">Pinterest</a></li>
+          </ul>
+        </div><!--end of col-sm-2-->
+
+        <div class="col-sm-4">
+          <h6>Coded with <span class="glyphicon glyphicon-heart"></span> by   <a href="https://github.com/vibertthio" target="_blank">Vibert</a></h6>
+        </div><!--end of col-sm-2-->
+      </div><!--end of row-->
+    </div><!--end of container-->
+  </footer>
 
 </html>

@@ -1,6 +1,8 @@
 
 $(document).ready(function(){
+  stroll.bind( '#main ul' );
   console.log("jquery is ready");
+
   var button = "<button type='button' class='close' aria-label='Close'><span aria-hidden='true'>&times;</span></button>";
 
   $('#todo-input').on("keyup", function(e) {
@@ -10,46 +12,52 @@ $(document).ready(function(){
       // Enter pressed
       console.log("ENTER");
       var form = $('#form-input');
-      var input = form.val();
-
-      //debug
-      console.log(input);
+      $("#todo-list").append(createItem(form.val()));
       form.val("");
-
-      //append
-      // element.text("haha");
-      // element.text(input + button);
-
-      // $('#todo-list').append("<li>" + input + button +"</li>");
-      var ol = $("#todo-list");
-      var li = document.createElement("li");
-      li.appendChild(document.createTextNode(input));
-
-      var sp = document.createElement("span");
-      sp.setAttribute("aria-hidden", 'true');
-      sp.innerHTML = "&times;";
-
-      var bt = document.createElement("button");
-      bt.setAttribute("type", "button");
-      bt.setAttribute("class", "close");
-      bt.setAttribute("aria-label", "Close");
-      bt.append(sp);
-
-      li.append(bt);
-      ol.append(li);
     }
 
   });
 
-});
+  createItem = function(input) {
+    var li = document.createElement("li");
+    li.setAttribute("class", "todo-item");
 
-$(document).on("click", "button" , function() {
-  console.log("clear");
-  $(this).parent().remove();
-});
+    var tg = document.createElement("input");
+    tg.setAttribute("type", "checkbox");
+    tg.setAttribute("class", "toggle");
+    tg.style.margin = "5px";
+    li.append(tg);
 
-// $(document).on(function() {
-//   $('.button').click(function() {
-//     console.log("clear");
-//   });
-// });
+    li.appendChild(document.createTextNode(input));
+
+    var cross = document.createElement("button");
+    cross.setAttribute("type", "button");
+    cross.setAttribute("class", "close");
+    cross.setAttribute("aria-label", "Close");
+    var sp = document.createElement("span");
+    sp.setAttribute("aria-hidden", 'true');
+    sp.innerHTML = "&times;";
+    cross.append(sp);
+
+    li.append(cross);
+    return li;
+  }
+
+  $(document).on("click", ".close" , function() {
+    console.log("clear");
+    $(this).parent().remove();
+  });
+
+  $(document).on("click", ".toggle", function() {
+    if ( $(this).is(":checked")) {
+      $(this).parent().wrap("<strike class='strk'>");
+      $(this).parent().attr("class", "todo-item-complete");
+      // $(this).parent().attr("text-decoration-color", "#AAAAAA");
+    }
+    else {
+      $(this).parent().attr("class", "todo-item")
+      $(this).parent().unwrap();
+    }
+  });
+
+});
