@@ -1,0 +1,39 @@
+/* --------------------------------------
+   Layout
+   -------------------------------------- */
+
+#main {
+  margin: 20px;
+  padding-top: 80px;
+  padding-left: 80px;
+  width: 600px;
+}
+
+#todo-label {
+  margin-right: 20px;
+  text-align: right;
+  font-size: 30px;
+  font-weight: 8px;
+}
+
+#todo-help {
+  font-size: 10px;
+}
+
+
+/* --------------------------------------
+   List Style
+   -------------------------------------- */
+#todo-list {
+  font-size: 15px;
+}
+
+li {
+  margin: 8px;
+}
+
+li img {
+  width: 8px;
+  height: 8px;
+  margin: auto;
+}
