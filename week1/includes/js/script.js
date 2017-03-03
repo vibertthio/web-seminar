@@ -1,4 +1,3 @@
-
 $(document).ready(function(){
   stroll.bind( '#main ul' );
   console.log("jquery is ready");
