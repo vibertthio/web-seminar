@@ -26,7 +26,7 @@
    List Style
    -------------------------------------- */
 #todo-list {
-  font-size: 15px;
+  font-size: 20px;
 }
 
 ul {
@@ -35,6 +35,13 @@ ul {
 
 #main li {
   margin: 8px;
+}
+
+#counter p{
+  color: #AAAAAA;
+  font-size: 10px;
+  font-style: italic;
+  text-align: center;
 }
 
 .todo-item {
@@ -53,6 +60,7 @@ ul {
 
 .todo-item-complete {
   color: #AAAAAA;
+  text-decoration: line-through;
 }
 
 .todo-item:hover {
@@ -61,6 +69,14 @@ ul {
 
 .strk {
   color: #AAAAAA;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.todo-content {
+  display: inline;
 }
 
 /* --------------------------------------

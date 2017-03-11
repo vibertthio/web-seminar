@@ -7,7 +7,7 @@
  * @returns {function} The sum of the two numbers.
  */
  const currySum = function currying(num) {
-   return function inner(n) {
+   return (n) => {
      const value = n + num;
      console.warn(value);
      return currying(value);

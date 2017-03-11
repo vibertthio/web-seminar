@@ -7,7 +7,16 @@
     "es6": true,
     "mocha": true
   },
+
+  "plugins": [
+    'react',
+    'jsx-a11y',
+    'import',
+  ],
+
   "rules": {
+    "no-console": 0,
+    "no-else-return": 0,
     "valid-jsdoc": ["error", {
       "requireReturn": false,
       "requireReturnType": false,
