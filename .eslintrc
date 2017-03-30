@@ -29,6 +29,8 @@
             "MethodDefinition": true,
             "ClassDeclaration": true
         }
-    }]
+    }],
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+
   }
 }
