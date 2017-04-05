@@ -31,6 +31,9 @@
         }
     }],
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    # "react/jsx-tag-spacing": 0,
+    # "react/no-array-index-key": 0,
+    # "import/no-named-default": 0,
 
   }
 }
