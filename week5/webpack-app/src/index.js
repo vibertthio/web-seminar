@@ -7,6 +7,7 @@ console.log(`5 + 2 = ${add(5, 2)}`);
 console.log('config finished!');
 console.log('watch mode on!');
 
+
 class App extends Component {
   render() {
     return (
